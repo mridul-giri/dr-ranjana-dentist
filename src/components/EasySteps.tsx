@@ -30,7 +30,7 @@ export default function EasySteps() {
         {cards.map((card, index) => (
           <Card
             key={index}
-            className="shadow-2xl bg-[#714c47] text-white xl:bg-white xl:text-[#714c47] hover:shadow-black hover:bg-[#714c47] hover:text-white border-none transition-all duration-300 ease-in-out "
+            className="shadow-2xl custom-bg hover:shadow-black border transition-all duration-300 ease-in-out "
           >
             <CardHeader>
               <CardTitle className="text-4xl">{card.heading}</CardTitle>

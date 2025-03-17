@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer>
-      <div className="mt-32 p-5 md:p-10 bg-[#714c47] text-white">
+      <div className="mt-32 p-5 md:p-10 secondary-bg text-white">
         <section className="flex justify-center items-center">
           <Image
             src="/icons/ranjana-dental-white-logo.png"
@@ -41,7 +41,7 @@ export default function Footer() {
           </section>
         </div>
       </div>
-      <section className="text-center custom-bg py-4 font-medium">
+      <section className="text-center bg-[#1e1e1e] text-white py-4 font-medium">
         All rights reserved, Copyright 2025 | Dr. Ranjana Sharma Dental Avenue
       </section>
     </footer>

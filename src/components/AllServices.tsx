@@ -4,32 +4,32 @@ import { motion } from "motion/react";
 
 const services = [
   {
-    src: "/icons/restorative-dentistry.png",
+    src: "/images/restorative-dentistry.jpg",
     title: "Restorative & Prosthetic Dentistry",
     info: "Replacing & Restoring Teeth",
   },
   {
-    src: "/icons/endodontics.png",
+    src: "/images/endodontics.jpeg",
     title: "Endodontics",
     info: "Root Canal Treatments & Tooth Preservation",
   },
   {
-    src: "/icons/orthodontics.png",
+    src: "/images/orthodontics.jpg",
     title: "Orthodontics & Smile Aesthetics",
     info: "Alignment & Cosmetic Enhancement",
   },
   {
-    src: "/icons/pediatric-dentistry.png",
+    src: "/images/pediatric-dentistry.jpg",
     title: "Pediatric Dentistry",
     info: "Specialized Care for Kids",
   },
   {
-    src: "/icons/oral-surgery.png",
+    src: "/images/oral-surgery.jpg",
     title: "Oral & Maxillofacial Surgery",
     info: "Advanced Surgical Procedures",
   },
   {
-    src: "/icons/emergency-dental-care.png",
+    src: "/images/emergency-dental-care.jpg",
     title: "Emergency & Urgent Dental Care",
     info: "Dental Trauma",
   },
@@ -37,7 +37,7 @@ const services = [
 
 export default function AllServices() {
   return (
-    <section className="mt-32 p-5 md:p-10 bg-[#714c47] text-white">
+    <section className="mt-32 p-5 md:p-10 secondary-bg text-white">
       <motion.h2
         className="text-2xl md:text-4xl font-bold text-center"
         {...fadeInUp}
@@ -52,14 +52,14 @@ export default function AllServices() {
         {services.map((service, index) => (
           <div
             key={index}
-            className="p-5 rounded-xl hover:shadow-2xl hover:rounded-md transition-all duration-300 ease-in-out border"
+            className="p-5 rounded-4xl hover:shadow-2xl hover:rounded-2xl transition-all duration-300 ease-in-out border"
           >
             <Image
               src={service.src}
-              width={100}
-              height={100}
+              width={500}
+              height={500}
               alt=""
-              className="justify-self-center"
+              className="w-full justify-self-center rounded-4xl"
             />
             <h3 className="text-2xl mt-5">{service.title}</h3>
             <h4 className="text-xl">{service.info}</h4>

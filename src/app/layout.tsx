@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden w-full">
       <body
-        className={`${averiaLibre.className} antialiased text-[#714c47] overflow-x-hidden w-full pb-[91px] xl:pb-0`}
+        className={`${averiaLibre.className} antialiased text-color overflow-x-hidden w-full pb-[91px] xl:pb-0`}
       >
         <Navbar />
         {children}
@@ -54,3 +54,4 @@ export default function RootLayout({
     </html>
   );
 }
+// text-[#714c47]

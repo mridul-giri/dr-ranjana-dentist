@@ -16,7 +16,7 @@ export default function MapLink() {
         href={googleMapUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-medium ml-2 px-5 py-0.5 border  border-color rounded-full custom-bg"
+        className="font-medium ml-2 px-5 py-0.5 border rounded-full custom-bg"
       >
         Click here to see location on map
       </a>

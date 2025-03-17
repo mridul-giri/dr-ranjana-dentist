@@ -64,7 +64,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className="hidden lg:flex justify-between items-center text-lg py-2 px-8 fixed w-[100%] top-0 left-0 z-50 custom-bg">
+      <nav className="hidden lg:flex justify-between items-center text-lg py-2 px-8 fixed w-[100%] top-0 left-0 z-50 custom-bg shadow-xl">
         <div className="flex justify-center items-center">
           <Link href="/" className="flex items-center">
             <Image
@@ -176,7 +176,7 @@ export default function Navbar() {
         )}
         <div
           className={`absolute top-[88px] right-0 pb-4 shadow-2xl
-          bg-[#d8c6b3] xl:hidden
+          secondary-bg text-white xl:hidden
           transition-all duration-300 ease-in-out  ${
             visible ? "w-full" : "w-0"
           }`}
@@ -214,14 +214,14 @@ export default function Navbar() {
                           Our Services
                         </NavigationMenuLink>
                       </NavigationMenuTrigger>
-                      <NavigationMenuContent className="custom-bg">
-                        <ul className="grid w-[400px] gap-3 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      <NavigationMenuContent className="custom-bg max-h-80 overflow-y-auto">
+                        <ul className="grid w-[300px] gap-1 md:gap-3 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px] border overflow-y-scroll">
                           {services.map((item, index) => (
                             <NavigationMenuLink
                               href={item.href}
                               key={index}
                               onClick={() => setVisible(false)}
-                              className="font-bold hover:underline p-1"
+                              className="font-bold text-color hover:underline p-1"
                             >
                               {item.title}
                             </NavigationMenuLink>

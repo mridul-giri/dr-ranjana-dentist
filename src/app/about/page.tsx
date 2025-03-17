@@ -41,7 +41,7 @@ const cards = [
     paragraphOne:
       "Beautiful smiles begin on the inside, which is why our commitment to exceptional dentistry demands we honor your soul as well.",
     paragraphTwo:
-      "We have designed spaces that serve as an oasis of escape, with modern, thoughtful design as well as  quiet spaces to help you achieve mindfulness and tranquility.",
+      "Our spaces are designed to be calm and relaxing, with modern style and quiet areas to help you feel peaceful and mindful.",
     src: "/icons/mindfulness-icon.png",
   },
 ];
@@ -118,7 +118,7 @@ export default function About() {
       </section>
 
       <motion.section
-        className="secondary-bg m-5 xl:m-10 p-5 xl:p-10 rounded-4xl border border-color"
+        className="secondary-bg text-white m-5 xl:m-10 p-5 xl:p-10 rounded-4xl border border-color"
         {...fadeInUp}
       >
         <h3 className="text-center text-4xl md:text-6xl font-bold mb-20">

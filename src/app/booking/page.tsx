@@ -15,10 +15,6 @@ export default function Booking() {
 
   const dentistPhoneNo = "+919599111643";
 
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  // };
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -53,7 +49,7 @@ export default function Booking() {
           When you are in need, our compassionate team is here to help
         </h2>
         <div className="mt-10">
-          <span className="py-4 px-5 border rounded-full bg-[#714c47] text-white transition-all duration-200 ease-in-out">
+          <span className="py-4 px-5 border rounded-full button-color font-bold transition-all duration-200 ease-in-out">
             Call Now: (+91) 9599111643
           </span>
         </div>
@@ -81,7 +77,7 @@ export default function Booking() {
         </section>
 
         <motion.section
-          className="border border-color xl:w-1/2 p-5 md:p-10 rounded-2xl"
+          className="border xl:w-1/2 p-5 md:p-10 rounded-2xl"
           {...heroFadeInUp}
         >
           <h4 className="text-3xl text-color1 text-center font-bold mb-10">
@@ -96,7 +92,7 @@ export default function Booking() {
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setFormData((prev) => ({ ...prev, name: e.target.value }))
               }
-              className="border border-color py-3 px-3 rounded-lg outline-none"
+              className="border py-3 px-3 rounded-lg outline-none"
             />
             <input
               type="tel"
@@ -106,11 +102,11 @@ export default function Booking() {
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setFormData((prev) => ({ ...prev, phone: e.target.value }))
               }
-              className="border border-color py-3 px-3 rounded-lg outline-none"
+              className="border py-3 px-3 rounded-lg outline-none"
             />
             <select
               name="day"
-              className="border border-color py-3 px-3 rounded-lg outline-none"
+              className="border py-3 px-3 rounded-lg outline-none"
               required
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
                 setFormData((prev) => ({ ...prev, day: e.target.value }))
@@ -131,9 +127,9 @@ export default function Booking() {
               name="message"
               placeholder="Additional Message"
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-                setFormData((prev) => ({ ...prev, message: e.target.value }))
+                setFormData({ ...formData, message: e.target.value })
               }
-              className="border border-color py-3 px-3 rounded-lg outline-none"
+              className="border py-3 px-3 rounded-lg outline-none"
             />
             <button
               type="submit"

@@ -3,21 +3,23 @@
 @plugin "tailwindcss-animate";
 
 .custom-bg {
-  background-color: #fbf6ef;
+  background-color: #fff7fc;
 }
 
 .secondary-bg {
-  background-color: #e7e7e7;
+  background-color: #4c657e;
 }
 
-.border-color {
-  border-color: #d8c6b3;
+.button-color {
+  background-color: #df7599;
 }
 
-.ultra-regular {
-  font-family: "Ultra", serif;
-  font-weight: 400;
-  font-style: normal;
+.text-color {
+  color: #1e1e1e;
+}
+
+.text-color2 {
+  color: #4c657e;
 }
 
 /* @custom-variant dark (&:is(.dark *)); */

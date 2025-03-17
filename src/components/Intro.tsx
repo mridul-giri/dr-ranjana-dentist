@@ -31,7 +31,7 @@ export default function Intro() {
             />
           </motion.div>
 
-          <motion.h3 className="text-xl md:text-4xl font-bold" {...fadeInLeft}>
+          <motion.h3 className="text-xl md:text-4xl font-bold text-color2" {...fadeInLeft}>
             If you&apos;re searching for the{" "}
             <strong>best dentist near me, the best dentist in Gurgaon,</strong>{" "}
             or a{" "}
