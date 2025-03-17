@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "Get professional dental care from experienced dentists. Book your appointment today for a healthy and confident smile!",
   icons: {
-    icon: "/favicon.ico.png",
+    icon: "/favicon.ico",
   },
   openGraph: {
     title:

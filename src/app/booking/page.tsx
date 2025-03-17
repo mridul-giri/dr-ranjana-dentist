@@ -49,7 +49,7 @@ export default function Booking() {
           When you are in need, our compassionate team is here to help
         </h2>
         <div className="mt-10">
-          <span className="py-4 px-5 border rounded-full button-color font-bold transition-all duration-200 ease-in-out">
+          <span className="py-4 px-5 rounded-full button-color font-bold transition-all duration-200 ease-in-out">
             Call Now: (+91) 9599111643
           </span>
         </div>
