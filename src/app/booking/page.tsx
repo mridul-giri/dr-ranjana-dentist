@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState } from "react";
 import React from "react";
@@ -16,11 +15,11 @@ export default function Booking() {
 
   const dentistPhoneNo = "+919599111643";
 
-  const handleChange = (e: any) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const whatsappMessage = `Hey Ranjana, I would like to book an appointment:
@@ -94,7 +93,9 @@ export default function Booking() {
               name="name"
               placeholder="Your Name"
               required
-              onChange={handleChange}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setFormData((prev) => ({ ...prev, name: e.target.value }))
+              }
               className="border border-color py-3 px-3 rounded-lg outline-none"
             />
             <input
@@ -102,14 +103,18 @@ export default function Booking() {
               name="phone"
               placeholder="Your Phone Number"
               required
-              onChange={handleChange}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setFormData((prev) => ({ ...prev, phone: e.target.value }))
+              }
               className="border border-color py-3 px-3 rounded-lg outline-none"
             />
             <select
               name="day"
               className="border border-color py-3 px-3 rounded-lg outline-none"
               required
-              onChange={handleChange}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                setFormData((prev) => ({ ...prev, day: e.target.value }))
+              }
             >
               <option value="" disabled defaultValue="">
                 Preferred day of the week
@@ -125,7 +130,9 @@ export default function Booking() {
             <textarea
               name="message"
               placeholder="Additional Message"
-              onChange={handleChange}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                setFormData((prev) => ({ ...prev, message: e.target.value }))
+              }
               className="border border-color py-3 px-3 rounded-lg outline-none"
             />
             <button

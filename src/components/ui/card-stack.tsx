@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
-let interval: any;
+let interval: NodeJS.Timeout | number;
 
 type Card = {
   id: number;
