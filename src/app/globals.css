@@ -2,24 +2,40 @@
 
 @plugin "tailwindcss-animate";
 
-.custom-bg {
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
+.primary-bg {
   background-color: #fff7fc;
 }
 
 .secondary-bg {
-  background-color: #4c657e;
+  background-color: #3b4451;
 }
 
 .button-color {
-  background-color: #df7599;
+  background-color: #c1713b;
+  color: white;
 }
 
-.text-color {
-  color: #1e1e1e;
+.primary-color {
+  color: #c1713b;
 }
 
-.text-color2 {
-  color: #4c657e;
+.secondary-color {
+  color: #3b4451;
+}
+
+.custom-shadow {
+  box-shadow: -50px -50px 0px -30px #c1713b;
 }
 
 /* @custom-variant dark (&:is(.dark *)); */

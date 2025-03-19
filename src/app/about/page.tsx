@@ -8,8 +8,8 @@ import {
 import Image from "next/image";
 import { motion } from "motion/react";
 import BookingBtn from "@/components/BookingBtn";
-import EasySteps from "@/components/EasySteps";
 import Reviews from "@/components/Reviews";
+import AllServices from "@/components/AllServices";
 
 const cards = [
   {
@@ -51,7 +51,7 @@ export default function About() {
     <main>
       <section className="custom-bg pt-32 xl:pt-40 px-5 md:px-10 pb-10 h-max">
         <motion.div className="text-center" {...heroFadeInLeft}>
-          <p className="text-3xl md:text-5xl font-bold">
+          <p className="text-3xl md:text-5xl font-bold secondary-color">
             An oasis of calm, compassion and tranquility
           </p>
           <p className="my-10 text-xl md:text-2xl">
@@ -66,77 +66,78 @@ export default function About() {
       </section>
 
       <section className="mt-32 px-5 md:px-32 pb-20">
-        <div className="flex flex-col xl:flex-row justify-center items-center">
+        <div className="flex flex-col xl:flex-col justify-center items-center">
           <motion.h1
-            className="text-5xl md:text-7xl font-bold text-center"
+            className="text-5xl md:text-6xl font-bold text-center secondary-color"
             {...fadeInLeft}
           >
-            Our Providers
+            Hi! I am Dr. Ranjana Sharma
           </motion.h1>
-          <motion.div {...fadeInUp}>
+          {/* <motion.div {...fadeInUp}>
             <Image
               src="/icons/curved-arrow-downward.png"
               width={100}
               height={100}
               alt=""
             />
-          </motion.div>
+          </motion.div> */}
         </div>
 
-        <div className="flex flex-col xl:flex-row gap-20">
+        <div className="flex flex-col xl:flex-row gap-20 mt-20">
           <motion.div className="w-full xl:w-1/2" {...fadeInLeft}>
             <h2 className="text-3xl font-bold py-5">BDS & Implantologist</h2>
             <p>
-              Dr. Ranjana Sharma is a highly skilled dental professional with 12
-              years of clinical experience. She completed her BDS from IDST
-              College, Meerut, in 2011 and has been dedicated to providing
-              exceptional dental care ever since.
+              I am a highly skilled dental professional with 12 years of
+              clinical experience. I completed my BDS from IDST College, Meerut,
+              in 2011 and I have been dedicated to providing exceptional dental
+              care ever since.
               <br />
-              <br /> Specializing in a wide range of treatments, Dr. Ranjana
-              Sharma excels in root canal treatments (RCTs), crowns and bridges,
-              extractions, esthetic fillings, tooth whitening, kids’ dental
-              treatments, dental implants, and full-mouth rehabilitation. Her
-              expertise in these areas has helped countless patients achieve
-              healthy and confident smiles.
+              <br /> I am Specializing in a wide range of treatments, Such as
+              root canal treatments (RCTs), crowns and bridges, extractions,
+              esthetic fillings, tooth whitening, kids’ dental treatments,
+              dental implants, and full-mouth rehabilitation. My expertise in
+              these areas has helped countless patients achieve healthy and
+              confident smiles.
               <br />
-              <br /> As a dedicated practitioner, Dr. Ranjana Sharma is
-              committed to offering personalized, high-quality dental care in a
-              patient-friendly environment, ensuring comfort and precision in
-              every treatment.
+              <br /> As a dedicated practitioner, I am committed to offering
+              personalized, high-quality dental care in a patient-friendly
+              environment, ensuring comfort and precision in every treatment.
             </p>
           </motion.div>
-          <motion.div className="w-full xl:w-1/2" {...fadeInRight}>
+          <motion.div className="w-full xl:w-1/2 px-5 xl:px-0" {...fadeInRight}>
             <Image
               src="/images/dr-ranjana-sharma.jpg"
               width={400}
               height={400}
               alt="Dr Ranjana Sharma"
-              className="rounded-full"
+              className="custom-shadow"
             />
           </motion.div>
         </div>
       </section>
 
-      <motion.section
-        className="secondary-bg text-white m-5 xl:m-10 p-5 xl:p-10 rounded-4xl border border-color"
-        {...fadeInUp}
-      >
-        <h3 className="text-center text-4xl md:text-6xl font-bold mb-20">
+      <section className="m-5 xl:m-10 p-5 xl:p-10 primary-bg rounded-4xl shadow border-t border-gray-500">
+        <motion.h3
+          className="text-center text-4xl md:text-6xl font-bold mb-20 secondary-color"
+          {...fadeInUp}
+        >
           What we’re striving for
-        </h3>
+        </motion.h3>
         <div className="grid xl:grid-cols-2 gap-16">
           {cards.map((card, index) => (
             <div key={index} className="flex flex-col md:flex-row gap-4">
-              <div className="w-full md:w-[30%]">
+              <motion.div className="w-full md:w-[30%] " {...fadeInLeft}>
                 <Image
                   src={card.src}
                   width={100}
                   height={100}
                   alt={card.title}
                 />
-              </div>
+              </motion.div>
               <div className="w-full">
-                <h4 className="text-2xl font-bold mb-2">{card.title}</h4>
+                <h4 className="text-2xl font-extrabold mb-2 primary-color">
+                  {card.title}
+                </h4>
                 <p>{card.paragraphOne}</p>
                 <br />
                 <p>{card.paragraphTwo}</p>
@@ -144,8 +145,8 @@ export default function About() {
             </div>
           ))}
         </div>
-      </motion.section>
-      <EasySteps />
+      </section>
+      <AllServices />
       <Reviews />
     </main>
   );

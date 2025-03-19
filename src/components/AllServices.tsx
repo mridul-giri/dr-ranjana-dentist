@@ -1,71 +1,86 @@
+"use client";
+import React from "react";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
-import { fadeInUp } from "@/animations/motionVariants";
 import { motion } from "motion/react";
+import { fadeInUp } from "@/animations/motionVariants";
 
-const services = [
+const content = [
   {
-    src: "/images/restorative-dentistry.jpg",
     title: "Restorative & Prosthetic Dentistry",
-    info: "Replacing & Restoring Teeth",
+    description:
+      "This focuses on repairing or replacing damaged or missing teeth. Treatments include dental fillings, crowns, bridges, dentures, and dental implants to restore function and aesthetics.",
+    content: (
+      <div>
+        <Image
+          src="/images/restorative-dentistry.jpg"
+          width={500}
+          height={500}
+          className=""
+          alt="Restorative & Prosthetic Dentistry"
+        />
+      </div>
+    ),
   },
   {
-    src: "/images/endodontics.jpeg",
     title: "Endodontics",
-    info: "Root Canal Treatments & Tooth Preservation",
+    description:
+      "Endodontics deals with the inside of the tooth, primarily focusing on root canal treatments. It helps save teeth affected by deep decay, infection, or trauma by treating the pulp (nerve) and sealing the tooth to prevent further issues.",
+    content: (
+      <div>
+        <Image
+          src="/images/endodontics.jpeg"
+          width={500}
+          height={500}
+          className=""
+          alt="Endodontics"
+        />
+      </div>
+    ),
   },
   {
-    src: "/images/orthodontics.jpg",
     title: "Orthodontics & Smile Aesthetics",
-    info: "Alignment & Cosmetic Enhancement",
+    description:
+      "This specialty corrects misaligned teeth and jaw issues using braces, clear aligners (like Invisalign), and retainers. It enhances both the appearance and function of the teeth, improving overall oral health and confidence.",
+    content: (
+      <div>
+        <Image
+          src="/images/orthodontics.jpg"
+          width={500}
+          height={500}
+          className=""
+          alt="Orthodontics & Smile Aesthetics"
+        />
+      </div>
+    ),
   },
   {
-    src: "/images/pediatric-dentistry.jpg",
     title: "Pediatric Dentistry",
-    info: "Specialized Care for Kids",
-  },
-  {
-    src: "/images/oral-surgery.jpg",
-    title: "Oral & Maxillofacial Surgery",
-    info: "Advanced Surgical Procedures",
-  },
-  {
-    src: "/images/emergency-dental-care.jpg",
-    title: "Emergency & Urgent Dental Care",
-    info: "Dental Trauma",
+    description:
+      "Dental care specifically for children, focusing on preventive treatments, cavity protection, and early orthodontic assessments. Pediatric dentists ensure a comfortable and positive experience for kids to establish lifelong oral hygiene habits.",
+    content: (
+      <div>
+        <Image
+          src="/images/pediatric-dentistry.jpg"
+          width={500}
+          height={500}
+          className=""
+          alt="Pediatric Dentistry"
+        />
+      </div>
+    ),
   },
 ];
-
 export default function AllServices() {
   return (
-    <section className="mt-32 p-5 md:p-10 secondary-bg text-white">
-      <motion.h2
-        className="text-2xl md:text-4xl font-bold text-center"
+    <section className="mt-32 p-5 md:p-10">
+      <motion.h3
+        className="text-center text-2xl md:ext-4xl secondary-color font-bold mb-10"
         {...fadeInUp}
       >
-        Achieve your perfect smile with confidence—our expert dental services
-        make it effortless.
-      </motion.h2>
-      <motion.div
-        className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 text-center pt-20"
-        {...fadeInUp}
-      >
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="p-5 rounded-4xl hover:shadow-2xl hover:rounded-2xl transition-all duration-300 ease-in-out border"
-          >
-            <Image
-              src={service.src}
-              width={500}
-              height={500}
-              alt=""
-              className="w-full justify-self-center rounded-4xl"
-            />
-            <h3 className="text-2xl mt-5">{service.title}</h3>
-            <h4 className="text-xl">{service.info}</h4>
-          </div>
-        ))}
-      </motion.div>
+        Your Perfect Smile Starts Here—Advanced & Gentle Dentistry.
+      </motion.h3>
+      <StickyScroll content={content} />
     </section>
   );
 }

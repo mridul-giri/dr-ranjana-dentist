@@ -64,7 +64,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className="hidden lg:flex justify-between items-center text-lg py-2 px-8 fixed w-[100%] top-0 left-0 z-50 custom-bg shadow-xl">
+      <nav className="hidden lg:flex justify-between items-center py-2 px-8 fixed w-[100%] top-0 left-0 z-50 bg-white shadow">
         <div className="flex justify-center items-center">
           <Link href="/" className="flex items-center">
             <Image
@@ -73,7 +73,7 @@ export default function Navbar() {
               height={70}
               alt=""
             />
-            <span className="font-bold">
+            <span className="font-bold text-xl">
               Dr. Ranjana Sharma <br />{" "}
               <span className="text-sm">Dental Avenue</span>
             </span>
@@ -81,12 +81,12 @@ export default function Navbar() {
         </div>
         <ul className="flex justify-between items-center gap-10">
           <li>
-            <Link href="/" className="font-bold hover:underline">
+            <Link href="/" className="font-semibold hover:underline">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" className="font-bold hover:underline">
+            <Link href="/about" className="font-semibold hover:underline">
               About Us
             </Link>
           </li>
@@ -97,18 +97,18 @@ export default function Navbar() {
                   <NavigationMenuTrigger className="p-0">
                     <NavigationMenuLink
                       href="/service"
-                      className="font-bold hover:underline p-0"
+                      className="font-semibold hover:underline p-0"
                     >
                       Our Services
                     </NavigationMenuLink>
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="custom-bg">
-                    <ul className="grid w-[400px] gap-3 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <NavigationMenuContent className="bg-white">
+                    <ul className="grid gap-3 p-2 grid-cols-2 lg:w-[400px]">
                       {services.map((item, index) => (
                         <NavigationMenuLink
                           href={item.href}
                           key={index}
-                          className="font-bold hover:underline p-1"
+                          className="font-semibold hover:underline p-1"
                         >
                           {item.title}
                         </NavigationMenuLink>
@@ -120,22 +120,18 @@ export default function Navbar() {
             </NavigationMenu>
           </li>
           <li>
-            <Link href="/gallery" className="font-bold hover:underline">
+            <Link href="/gallery" className="font-semibold hover:underline">
               Gallery
             </Link>
           </li>
           <li>
             <BookingBtn />
           </li>
-          <div>
-            <li className="font-bold">(+91) 9599111643</li>
-            <li className="font-bold">drranjanadentalavenue@gmail.com</li>
-          </div>
         </ul>
       </nav>
 
       {/* Small screen navbar */}
-      <nav className="xl:hidden flex justify-between items-center text-lg py-4 px-4 md:px-8 fixed w-[100%] top-0 left-0 z-50 custom-bg">
+      <nav className="xl:hidden flex justify-between items-center py-4 px-4 md:px-8 fixed w-[100%] top-0 left-0 z-50 bg-white shadow">
         <div className="flex justify-center items-center">
           <Link
             href="/"
@@ -186,7 +182,7 @@ export default function Navbar() {
               <Link
                 href="/"
                 onClick={() => setVisible(false)}
-                className="font-bold hover:underline"
+                className="font-semibold hover:underline"
               >
                 Home
               </Link>
@@ -195,7 +191,7 @@ export default function Navbar() {
               <Link
                 href="/about"
                 onClick={() => setVisible(false)}
-                className="font-bold hover:underline"
+                className="font-semibold hover:underline"
               >
                 About Us
               </Link>
@@ -209,13 +205,13 @@ export default function Navbar() {
                         <NavigationMenuLink
                           href="/service"
                           onClick={() => setVisible(false)}
-                          className="font-bold hover:underline p-0"
+                          className="font-semibold hover:underline p-0"
                         >
                           Our Services
                         </NavigationMenuLink>
                       </NavigationMenuTrigger>
-                      <NavigationMenuContent className="custom-bg max-h-80 overflow-y-auto">
-                        <ul className="grid w-[300px] gap-1 md:gap-3 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px] border overflow-y-scroll">
+                      <NavigationMenuContent className="bg-white text-[#1e1e1e] max-h-80 overflow-y-auto">
+                        <ul className="grid w-[300px] gap-1 md:gap-3 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                           {services.map((item, index) => (
                             <NavigationMenuLink
                               href={item.href}
@@ -237,7 +233,7 @@ export default function Navbar() {
               <Link
                 href="/gallery"
                 onClick={() => setVisible(false)}
-                className="font-bold hover:underline"
+                className="font-semibold hover:underline"
               >
                 Gallery
               </Link>

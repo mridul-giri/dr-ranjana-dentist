@@ -1,6 +1,5 @@
 "use client";
 import AllServices from "@/components/AllServices";
-import EasySteps from "@/components/EasySteps";
 import PageHeader from "@/components/PageHeader";
 import Reviews from "@/components/Reviews";
 import ServiceHero from "@/components/ServiceHero";
@@ -21,7 +20,6 @@ export default function Services() {
         ]}
       />
       <AllServices />
-      <EasySteps />
       <Reviews />
     </main>
   );

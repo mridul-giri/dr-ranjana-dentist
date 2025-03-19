@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Averia_Libre } from "next/font/google";
+import { Trirong } from "next/font/google";
 import BottomNavbar from "@/components/BottomNavbar";
 
-const averiaLibre = Averia_Libre({
+const openSans = Trirong({
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden w-full">
       <body
-        className={`${averiaLibre.className} antialiased text-color overflow-x-hidden w-full pb-[91px] xl:pb-0`}
+        className={`${openSans.className} antialiased text-[#1e1e1e] overflow-x-hidden w-full pb-[91px] xl:pb-0`}
       >
         <Navbar />
         {children}

@@ -9,16 +9,13 @@ export default function MapLink() {
 
   return (
     <>
-      <span>
-        Shop number 42, Pivotal Divaan, Sector 84, Gurgaon, Haryana, 122004
-      </span>
       <a
         href={googleMapUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-medium ml-2 px-5 py-0.5 border rounded-full custom-bg"
+        className="font-medium ml-2 px-5 border rounded-full custom-bg"
       >
-        Click here to see location on map
+        Get Directions
       </a>
     </>
   );

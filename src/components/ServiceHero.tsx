@@ -13,14 +13,13 @@ export default function ServiceHero({ paragraph }: ServiceHeroProps) {
       <motion.div {...fadeInUp}>
         <Image
           src="/icons/curved-arrow-downward.png"
-          width={100}
-          height={100}
+          width={150}
+          height={150}
           alt=""
-          className=""
         />
       </motion.div>
 
-      <motion.div className="text-2xl text-center mb-5" {...fadeInLeft}>
+      <motion.div className="text-xl font-semibold text-center my-5 secondary-color" {...fadeInLeft}>
         <p>
           {paragraph.map((line, index) => (
             <span key={index}>

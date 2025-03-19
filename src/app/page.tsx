@@ -2,9 +2,11 @@
 import Hero from "@/components/Hero";
 import AllServices from "@/components/AllServices";
 import Intro from "@/components/Intro";
-import EasySteps from "@/components/EasySteps";
 import Reviews from "@/components/Reviews";
 import Carousels from "@/components/Carousels";
+import MapLink from "@/components/MapLink";
+import { motion } from "motion/react";
+import { fadeInUp } from "@/animations/motionVariants";
 
 const cards = [
   {
@@ -33,6 +35,37 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <section className="mt-28 px-5 md:px-10 xl:px-32 ">
+        <motion.h2
+          className="secondary-color text-4xl md:text-6xl font-bold text-center"
+          {...fadeInUp}
+        >
+          Visit our dental office
+        </motion.h2>
+        <div className="grid xl:grid-cols-3 gap-5 md:gap-10 secondary-bg text-white mt-10 p-5 md:p-10 items-center text-center rounded-tl-4xl  rounded-br-4xl">
+          <div className="border-b xl:border-r xl:border-b-0 font-bold h-full p-5">
+            <h3 className="text-2xl pb-2">Our Address:</h3>
+            <h4 className="pb-2">
+              Shop number 42, Pivotal Divaan, Sector 84, Gurgaon, Haryana,
+              122004
+            </h4>
+            <MapLink />
+          </div>
+          <div className="border-b xl:border-r xl:border-b-0  font-bold h-full p-5">
+            <h3 className="text-2xl pb-2">Phone:</h3>
+            <h4 className="text-xl">(+91) 9599111643</h4>
+          </div>
+          <div className="font-bold h-full p-5">
+            <h3 className="text-2xl pb-2">Hours:</h3>
+            <h4 className="text-xl pb-1">(Monday - Sunday)</h4>
+            <ul>
+              <li>Morning: 10:00am - 1:00pm</li>
+              <li>Evening: 4:00pm - 8:00pm</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <Intro />
       <Carousels
         heading="A trip to the dentist's office should a source of serenity, not
           anxiety"
@@ -41,8 +74,6 @@ export default function Home() {
         cards={cards}
       />
       <AllServices />
-      <Intro />
-      <EasySteps />
       <Reviews />
     </main>
   );

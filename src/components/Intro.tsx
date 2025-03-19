@@ -5,20 +5,14 @@ import BookingBtn from "./BookingBtn";
 
 export default function Intro() {
   return (
-    <section className="pt-20 p-5 md:p-10 custom-bg">
-      <motion.h2
-        className="text-center text-2xl md:text-5xl font-bold"
-        {...fadeInUp}
-      >
-        Dental Clinic in Gurgaon
-      </motion.h2>
-      <div className="flex flex-col xl:flex-row gap-10 mt-10">
+    <section className="mt-28 p-5 md:p-10 custom-bg">
+      <div className="flex flex-col xl:flex-row gap-10 p-10 border-t border-gray-500 rounded-tl-[10%] rounded-br-[10%] rounded-2xl shadow-xl shadow-black hover:shadow-xl hover:shadow-[#c1713b] transition-all duration-100 ease-in-out">
         <div className="w-full xl:w-1/2 flex flex-col-reverse xl:flex-col gap-5 items-center xl:items-end">
           <motion.div {...fadeInUp}>
             <Image
               src="/icons/forward-arrow.png"
-              width={100}
-              height={100}
+              width={150}
+              height={150}
               alt=""
               className="hidden xl:block"
             />
@@ -31,16 +25,19 @@ export default function Intro() {
             />
           </motion.div>
 
-          <motion.h3 className="text-xl md:text-4xl font-bold text-color2" {...fadeInLeft}>
-            If you&apos;re searching for the{" "}
+          <motion.h3
+            className="text-xl md:text-3xl font-bold secondary-bg text-white py-5 px-12 rounded-2xl shadow-xl shadow-black"
+            {...fadeInLeft}
+          >
+            &quot;If you&apos;re searching for the{" "}
             <strong>best dentist near me, the best dentist in Gurgaon,</strong>{" "}
             or a{" "}
             <strong>trusted family dentist in Gurgaon and Delhi NCR,</strong>{" "}
-            you&apos;ve come to the right place.
+            you&apos;ve come to the right place.&quot;
           </motion.h3>
         </div>
         <motion.div className="w-full xl:w-1/2" {...fadeInRight}>
-          <p className="text-lg mb-10">
+          <p className="font-medium mb-10 secondary-color">
             Dr. Ranjana’s state-of-the-art{" "}
             <strong>Dental Clinic in Gurgaon</strong> is dedicated to providing{" "}
             <strong>high-quality dental treatments</strong> in a comfortable and

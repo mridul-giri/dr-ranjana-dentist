@@ -44,8 +44,10 @@ export default function Booking() {
         className="mt-40 text-center p-5 md:p-0"
         {...heroFadeInUp}
       >
-        <h1 className="text-5xl md:text-7xl font-bold">Book an Appointment</h1>
-        <h2 className="text-xl md:text-2xl">
+        <h1 className="text-5xl md:text-7xl font-bold secondary-color">
+          Book an Appointment
+        </h1>
+        <h2 className="text-xl md:text-2xl mt-2">
           When you are in need, our compassionate team is here to help
         </h2>
         <div className="mt-10">
@@ -55,35 +57,42 @@ export default function Booking() {
         </div>
       </motion.section>
 
-      <div className="flex flex-col-reverse xl:flex-row px-5 md:px-10 gap-20 mt-28">
+      <div className="flex flex-col-reverse xl:flex-row px-5 md:px-10 gap-20 mt-28 secondary-color">
         <section className="flex flex-col gap-10 xl:w-1/2">
           <motion.div {...fadeInUp}>
-            <p className="font-bold text-4xl mb-3">Our official hours are:</p>
+            <p className="font-bold text-4xl mb-3 primary-color">
+              Our official hours are:
+            </p>
             <ul className="flex flex-col gap-1 font-medium text-xl">
-              <li className="text-2xl">(Monday to Sunday)</li>
+              <li className="text-2xl font-semibold">(Monday to Sunday)</li>
               <li>- Morning: 10:00am - 1:00pm</li>
               <li>- Evening: 4:00am - 8:00pm</li>
               <li className="text-xl md:text-2xl font-bold pt-5">
-                Email id:- drranjanadentalavenue@gmail.com
+                <span className="primary-color">Email id:- </span>{" "}
+                drranjanadentalavenue@gmail.com
               </li>
             </ul>
           </motion.div>
           <motion.div {...fadeInUp}>
-            <h3 className="text-4xl font-bold mb-3">Our address:</h3>
+            <h3 className="text-4xl font-bold mb-3 primary-color">
+              Our address:
+            </h3>
             <p className="mb-3 text-xl font-bold">
+              Shop number 42, Pivotal Divaan, Sector 84, Gurgaon, Haryana,
+              122004
               <MapLink />
             </p>
           </motion.div>
         </section>
 
         <motion.section
-          className="border xl:w-1/2 p-5 md:p-10 rounded-2xl"
+          className="border xl:w-1/2 p-5 md:p-10 rounded-2xl secondary-color "
           {...heroFadeInUp}
         >
-          <h4 className="text-3xl text-color1 text-center font-bold mb-10">
+          <h4 className="text-3xl text-center font-bold mb-10">
             Appointment Form
           </h4>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5 font-semibold">
             <input
               type="text"
               name="name"

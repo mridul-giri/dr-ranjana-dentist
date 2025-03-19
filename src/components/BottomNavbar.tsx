@@ -5,8 +5,8 @@ export default function BottomNavbar() {
   return (
     <nav>
       <section
-        className="xl:hidden fixed bottom-0 left-0 w-full z-50 button-color border-t font-bold
-      flex justify-between items-center gap-5 px-4 py-5"
+        className="xl:hidden fixed bottom-0 left-0 w-full z-50 button-color font-bold
+      flex justify-between items-center gap-5 px-4 py-5 shadow shadow-black"
       >
         <Link
           href="/booking"

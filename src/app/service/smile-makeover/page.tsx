@@ -1,5 +1,4 @@
 "use client";
-import EasySteps from "@/components/EasySteps";
 import PageHeader from "@/components/PageHeader";
 import Reviews from "@/components/Reviews";
 import ServiceHero from "@/components/ServiceHero";
@@ -43,7 +42,6 @@ export default function SmileMakeover() {
         subHeading="Experience the life-changing benefits of a perfect smile."
         cards={cards}
       />
-      <EasySteps />
       <Reviews />
     </main>
   );

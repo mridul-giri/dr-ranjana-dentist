@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import MapLink from "./MapLink";
 
 export default function Footer() {
   return (
     <footer>
-      <div className="mt-32 p-5 md:p-10 secondary-bg text-white">
+      <div className="mt-32 p-5 md:p-10 secondary-bg text-[#fff2e9]">
         <section className="flex justify-center items-center">
           <Image
             src="/icons/ranjana-dental-white-logo.png"
@@ -12,7 +13,7 @@ export default function Footer() {
             height={100}
             alt=""
           />
-          <span className="font-bold">
+          <span className="font-bold text-xl text-white">
             Dr. Ranjana Sharma <br />{" "}
             <span className="text-sm">Dental Avenue</span>
           </span>
@@ -33,6 +34,7 @@ export default function Footer() {
                 <p className="mb-3">
                   Address- Shop number 42, Pivotal Divaan, Sector 84, Gurgaon,
                   Haryana, 122004
+                  <MapLink />
                 </p>
               </li>
               <li>Call- (+91) 9599111643</li>

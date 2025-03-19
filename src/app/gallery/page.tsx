@@ -25,7 +25,7 @@ export default function Gallery() {
             height={500}
             width={500}
             alt={`Dental Clinic Image ${index + 1}`}
-            className="mb-5 w-full h-auto object-cover rounded-lg "
+            className="mb-5 w-full h-auto object-cover rounded-2xl shadow-2xl"
           />
         ))}
       </motion.section>
