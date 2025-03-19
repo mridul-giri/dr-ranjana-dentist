@@ -11,12 +11,12 @@ const content = [
     description:
       "This focuses on repairing or replacing damaged or missing teeth. Treatments include dental fillings, crowns, bridges, dentures, and dental implants to restore function and aesthetics.",
     content: (
-      <div>
+      <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src="/images/restorative-dentistry.jpg"
           width={500}
           height={500}
-          className=""
+          className="h-full w-full object-cover"
           alt="Restorative & Prosthetic Dentistry"
         />
       </div>
@@ -27,12 +27,12 @@ const content = [
     description:
       "Endodontics deals with the inside of the tooth, primarily focusing on root canal treatments. It helps save teeth affected by deep decay, infection, or trauma by treating the pulp (nerve) and sealing the tooth to prevent further issues.",
     content: (
-      <div>
+      <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src="/images/endodontics.jpeg"
           width={500}
           height={500}
-          className=""
+          className="h-full w-full object-cover"
           alt="Endodontics"
         />
       </div>
@@ -43,12 +43,12 @@ const content = [
     description:
       "This specialty corrects misaligned teeth and jaw issues using braces, clear aligners (like Invisalign), and retainers. It enhances both the appearance and function of the teeth, improving overall oral health and confidence.",
     content: (
-      <div>
+      <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src="/images/orthodontics.jpg"
           width={500}
           height={500}
-          className=""
+          className="h-full w-full object-cover"
           alt="Orthodontics & Smile Aesthetics"
         />
       </div>
@@ -59,12 +59,12 @@ const content = [
     description:
       "Dental care specifically for children, focusing on preventive treatments, cavity protection, and early orthodontic assessments. Pediatric dentists ensure a comfortable and positive experience for kids to establish lifelong oral hygiene habits.",
     content: (
-      <div>
+      <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src="/images/pediatric-dentistry.jpg"
           width={500}
           height={500}
-          className=""
+          className="h-full w-full object-cover"
           alt="Pediatric Dentistry"
         />
       </div>
