@@ -6,8 +6,8 @@ import BookingBtn from "./BookingBtn";
 export default function Intro() {
   return (
     <section className="mt-28 p-5 md:p-10 custom-bg">
-      <div className="flex flex-col xl:flex-row gap-10 p-10 border-t border-gray-500 rounded-tl-[10%] rounded-br-[10%] rounded-2xl shadow-xl shadow-black hover:shadow-xl hover:shadow-[#c1713b] transition-all duration-100 ease-in-out">
-        <div className="w-full xl:w-1/2 flex flex-col-reverse xl:flex-col gap-5 items-center xl:items-end">
+      <div className="flex flex-col xl:flex-row gap-10 border-t border-gray-500 rounded-xl shadow shadow-black hover:shadow hover:shadow-[#c1713b] transition-all duration-100 ease-in-out">
+        <div className="w-full xl:w-1/2 flex flex-col-reverse xl:flex-col gap-5 p-10 items-center xl:items-end">
           <motion.div {...fadeInUp}>
             <Image
               src="/icons/forward-arrow.png"
@@ -26,7 +26,7 @@ export default function Intro() {
           </motion.div>
 
           <motion.h3
-            className="text-xl md:text-3xl font-bold secondary-bg text-white py-5 px-12 rounded-2xl shadow-xl shadow-black"
+            className="text-lg md:text-2xl p-5 font-bold secondary-bg text-white py-5 px-6 md:px-12 rounded-2xl custom-shadow"
             {...fadeInLeft}
           >
             &quot;If you&apos;re searching for the{" "}
@@ -36,7 +36,7 @@ export default function Intro() {
             you&apos;ve come to the right place.&quot;
           </motion.h3>
         </div>
-        <motion.div className="w-full xl:w-1/2" {...fadeInRight}>
+        <motion.div className="w-full xl:w-1/2 p-5 md:p-10" {...fadeInRight}>
           <p className="font-medium mb-10 secondary-color">
             Dr. Ranjana’s state-of-the-art{" "}
             <strong>Dental Clinic in Gurgaon</strong> is dedicated to providing{" "}

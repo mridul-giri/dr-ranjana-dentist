@@ -5,7 +5,7 @@ import MapLink from "./MapLink";
 export default function Footer() {
   return (
     <footer>
-      <div className="mt-32 p-5 md:p-10 secondary-bg text-[#fff2e9]">
+      <div className="mt-32 p-5 md:p-10 secondary-bg text-white">
         <section className="flex justify-center items-center">
           <Image
             src="/icons/ranjana-dental-white-logo.png"
@@ -20,16 +20,18 @@ export default function Footer() {
         </section>
         <div className="flex flex-col xl:flex-row justify-between gap-5 mt-10">
           <section className="w-full">
-            <h3 className="text-4xl font-bold mb-6">Our Hours:</h3>
-            <ul className="flex flex-col gap-1 text-xl">
-              <li className="text-2xl">(Monday to Sunday)</li>
+            <h3 className="text-2xl md:text-4xl font-bold mb-6">Our Hours:</h3>
+            <ul className="flex flex-col gap-1 md:text-xl">
+              <li className="text-xl md:text-2xl">(Monday to Sunday)</li>
               <li>- Morning: 10:00am - 1:00pm</li>
               <li>- Evening: 4:00am - 8:00pm</li>
             </ul>
           </section>
           <section className="w-full">
-            <h3 className="text-4xl font-bold mb-6">Our Location:</h3>
-            <ul className="flex flex-col gap-5 text-xl">
+            <h3 className="text-2xl md:text-4xl font-bold mb-6">
+              Our Location:
+            </h3>
+            <ul className="flex flex-col gap-5 md:text-xl">
               <li>
                 <p className="mb-3">
                   Address- Shop number 42, Pivotal Divaan, Sector 84, Gurgaon,

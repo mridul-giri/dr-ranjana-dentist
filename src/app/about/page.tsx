@@ -68,24 +68,16 @@ export default function About() {
       <section className="mt-32 px-5 md:px-32 pb-20">
         <div className="flex flex-col xl:flex-col justify-center items-center">
           <motion.h1
-            className="text-5xl md:text-6xl font-bold text-center secondary-color"
+            className="text-3xl md:text-6xl font-bold text-center secondary-color"
             {...fadeInLeft}
           >
             Hi! I am Dr. Ranjana Sharma
           </motion.h1>
-          {/* <motion.div {...fadeInUp}>
-            <Image
-              src="/icons/curved-arrow-downward.png"
-              width={100}
-              height={100}
-              alt=""
-            />
-          </motion.div> */}
         </div>
 
-        <div className="flex flex-col xl:flex-row gap-20 mt-20">
+        <div className="flex flex-col xl:flex-row gap-20 mt-10 md:mt-20">
           <motion.div className="w-full xl:w-1/2" {...fadeInLeft}>
-            <h2 className="text-3xl font-bold py-5">BDS & Implantologist</h2>
+            <h2 className="text-2xl md:text-3xl font-bold py-5">BDS & Implantologist</h2>
             <p>
               I am a highly skilled dental professional with 12 years of
               clinical experience. I completed my BDS from IDST College, Meerut,
@@ -116,7 +108,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="m-5 xl:m-10 p-5 xl:p-10 primary-bg rounded-4xl shadow border-t border-gray-500">
+      <section className="m-5 xl:m-10 p-5 xl:p-10 primary-bg rounded-xl shadow shadow-black hover:shadow hover:shadow-[#c1713b] transition-all duration-100 ease-in-out border-t border-gray-500">
         <motion.h3
           className="text-center text-4xl md:text-6xl font-bold mb-20 secondary-color"
           {...fadeInUp}
