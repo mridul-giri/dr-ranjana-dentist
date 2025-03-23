@@ -1,7 +1,14 @@
 "use client";
 import { motion } from "motion/react";
 import { fadeInLeft, fadeInUp } from "@/animations/motionVariants";
-import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 const reviews = [
   {
@@ -44,9 +51,30 @@ export default function Reviews() {
         </motion.h3>
       </div>
 
-      <div className="flex flex-col xl:flex-row items-center gap-32 mt-10 xl:gap-36 w-full">
-        {/* <CardStack items={reviews} /> */}
-        <InfiniteMovingCards items={reviews} direction="right" speed="slow" />
+      <div className="flex justify-center items-center px-10 md:px-20 pt-20">
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full max-w-3xl"
+        >
+          <CarouselContent>
+            {reviews.map((review, index) => (
+              <CarouselItem key={index}>
+                <Card className="secondary-bg text-white">
+                  <CardContent>
+                    <p className="md:text-lg">{review.quote}</p>
+                  </CardContent>
+                  <CardFooter>
+                    <span className="font-bold">{review.name}</span>
+                  </CardFooter>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );

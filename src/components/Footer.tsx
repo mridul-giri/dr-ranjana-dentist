@@ -36,6 +36,7 @@ export default function Footer() {
                 <p className="mb-3">
                   Address- Shop number 42, Pivotal Divaan, Sector 84, Gurgaon,
                   Haryana, 122004
+                  <br />
                   <MapLink />
                 </p>
               </li>

@@ -11,7 +11,12 @@ export default function Booking() {
     phone: "",
     day: "",
     message: "",
+    time: "",
   });
+
+  const handleCall = () => {
+    window.location.href = "tel:+919599111643";
+  };
 
   const dentistPhoneNo = "+919599111643";
 
@@ -22,6 +27,7 @@ export default function Booking() {
     - Name: ${formData.name}
     - Phone: ${formData.phone}
     - Day: ${formData.day}
+    - Time: ${formData.time}
     - Message: ${formData.message}`;
 
     // Encode message for URL
@@ -51,7 +57,10 @@ export default function Booking() {
           When you are in need, our compassionate team is here to help
         </h2>
         <div className="mt-10">
-          <span className="py-4 px-5 rounded-full button-color font-bold transition-all duration-200 ease-in-out">
+          <span
+            onClick={handleCall}
+            className="py-4 px-5 rounded-full button-color cursor-pointer font-bold transition-all duration-200 ease-in-out"
+          >
             Call Now: (+91) 9599111643
           </span>
         </div>
@@ -67,7 +76,7 @@ export default function Booking() {
               <li className="text-2xl font-semibold">(Monday to Sunday)</li>
               <li>- Morning: 10:00am - 1:00pm</li>
               <li>- Evening: 4:00am - 8:00pm</li>
-              <li className="text-xl md:text-2xl font-bold pt-5">
+              <li className="text-lg md:text-xl font-bold pt-5">
                 <span className="primary-color">Email id:- </span>{" "}
                 drranjanadentalavenue@gmail.com
               </li>
@@ -77,9 +86,12 @@ export default function Booking() {
             <h3 className="text-4xl font-bold mb-3 primary-color">
               Our address:
             </h3>
-            <p className="mb-3 text-xl font-bold">
-              Shop number 42, Pivotal Divaan, Sector 84, Gurgaon, Haryana,
-              122004
+            <p>
+              <span className="mb-3 text-xl font-bold">
+                Shop number 42, Pivotal Divaan, Sector 84, Gurgaon, Haryana,
+                122004
+              </span>
+              <br />
               <MapLink />
             </p>
           </motion.div>
@@ -92,7 +104,10 @@ export default function Booking() {
           <h4 className="text-3xl text-center font-bold mb-10">
             Appointment Form
           </h4>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5 font-semibold">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-5 font-semibold"
+          >
             <input
               type="text"
               name="name"
@@ -132,6 +147,15 @@ export default function Booking() {
               <option value="saturday">Saturday</option>
               <option value="sunday">Sunday</option>
             </select>
+            <input
+              type="time"
+              name="time"
+              required
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setFormData((prev) => ({ ...prev, time: e.target.value }))
+              }
+              className="border py-3 px-3 rounded-lg outline-none"
+            />
             <textarea
               name="message"
               placeholder="Additional Message"

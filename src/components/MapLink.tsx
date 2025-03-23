@@ -13,7 +13,7 @@ export default function MapLink() {
         href={googleMapUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-medium ml-2 px-5 border rounded-full custom-bg"
+        className="font-medium px-3 border rounded-full custom-bg"
       >
         Get Directions
       </a>
