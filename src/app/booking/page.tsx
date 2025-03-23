@@ -150,7 +150,7 @@ export default function Booking() {
             <input
               type="time"
               name="time"
-              defaultValue=""
+              defaultValue="10:00"
               required
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setFormData((prev) => ({ ...prev, time: e.target.value }))
