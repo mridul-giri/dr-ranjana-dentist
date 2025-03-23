@@ -136,7 +136,7 @@ export default function Booking() {
                 setFormData((prev) => ({ ...prev, day: e.target.value }))
               }
             >
-              <option value="" disabled defaultValue="">
+              <option value="" disabled>
                 Preferred day of the week
               </option>
               <option value="monday">Monday</option>
@@ -155,7 +155,7 @@ export default function Booking() {
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setFormData((prev) => ({ ...prev, time: e.target.value }))
               }
-              className="border py-3 px-3 rounded-lg outline-none"
+              className="border py-3 px-3 rounded-lg outline-none w-full"
             />
             <textarea
               name="message"
