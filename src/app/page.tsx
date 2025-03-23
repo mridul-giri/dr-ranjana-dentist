@@ -53,7 +53,12 @@ export default function Home() {
           </div>
           <div className="border-b xl:border-r xl:border-b-0  font-bold h-full p-5">
             <h3 className="text-2xl pb-2">Phone:</h3>
-            <h4 className="text-xl">(+91) 9599111643</h4>
+            <h4
+              onClick={() => (window.location.href = "tel:+919599111643")}
+              className="text-xl cursor-pointer"
+            >
+              (+91) 9599111643
+            </h4>
           </div>
           <div className="font-bold h-full p-5">
             <h3 className="text-2xl pb-2">Hours:</h3>

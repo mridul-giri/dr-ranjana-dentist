@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Link from "next/link";
 
@@ -14,7 +15,12 @@ export default function BottomNavbar() {
         >
           Book Now
         </Link>
-        <span className="text-xl w-1/2 text-center">(+91) 9599111643</span>
+        <span
+          onClick={() => (window.location.href = "tel:+919599111643")}
+          className="text-xl w-1/2 text-center cursor-pointer"
+        >
+          (+91) 9599111643
+        </span>
       </section>
     </nav>
   );
